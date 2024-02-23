@@ -23,11 +23,11 @@
         android:id="@+id/saveButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@id/addNoteheading"
+        android:src="@drawable/baseline_done_24"
         android:layout_alignParentEnd="true"
+        android:layout_alignTop="@id/addNoteheading"
         android:layout_marginEnd="6dp"
         android:contentDescription="TODO"
-        android:src="@drawable/baseline_done_24"
         tools:ignore="ContentDescription,HardcodedText" />
 
     <EditText
@@ -49,12 +49,12 @@
         android:id="@+id/contentEditText"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/titleEditText"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/orange_border"
-        android:fontFamily="@font/poppins"
-        android:gravity="top"
         android:hint="Enter the description"
+        android:gravity="top"
         android:padding="12dp"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:fontFamily="@font/poppins"
+        android:background="@drawable/orange_border"
+        android:layout_below="@+id/titleEditText"
+        android:layout_marginTop="12dp"/>
 </RelativeLayout>

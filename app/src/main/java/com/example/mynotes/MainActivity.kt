@@ -3,6 +3,8 @@ package com.example.mynotes
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -36,8 +38,10 @@ class MainActivity : AppCompatActivity() {
         binding.notesRecyclerView.adapter = notesAdapter
 
         binding.addButton.setOnClickListener {
-
-            //i have to call addnotefragments here
+          /*  val fragmentTransaction = supportFragmentManager.beginTransaction()
+            fragmentTransaction.replace(R.id.MainView, AddNoteFragment())
+            fragmentTransaction.addToBackStack(null)  // Optional, to add the transaction to the back stack
+            fragmentTransaction.commit()*/
             val intent = Intent(this,AddNoteActivity::class.java) // commnet this line
             startActivity(intent)
         }
@@ -45,6 +49,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
+        Log.e("refreshData",db.getAllNotes().size.toString())
+        Log.e("refreshData",db.getAllNotes().toString())
         notesAdapter.refreshData(db.getAllNotes())
+
     }
 }

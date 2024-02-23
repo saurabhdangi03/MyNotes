@@ -1,5 +1,6 @@
 package com.example.mynotes
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -11,6 +12,7 @@ class UpdateActivity : AppCompatActivity() {
     private lateinit var db : NotesDatabaseHelper
     private var noteId: Int = -1
 
+    @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
